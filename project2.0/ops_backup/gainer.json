@@ -1,0 +1,30 @@
+{
+  "name": "Get top 3 gainers",
+  "id": 1,
+  "time": {
+    "cycle": 30
+  },
+  "procedure": [
+    { 
+      "cmd": "GOTO", 
+      "link": "file:///C:/Users/Rohan%20Antony/Desktop/Graham/sample.html"
+    },{
+      "cmd": "EXTRACT",
+      "collection": "gainer",
+      "fields": [
+        {
+          "link": "/html/body/table/tbody/tr[2]/td[2]", 
+          "key": "gainer1"
+        },{
+          "link": "/html/body/table/tbody/tr[3]/td[2]", 
+          "key": "gainer2"
+        },{
+          "link": "/html/body/table/tbody/tr[4]/td[2]", 
+          "key": "gainer3"
+        }
+      ]       
+    },{
+      "cmd": "EXIT"
+    }
+  ]
+}

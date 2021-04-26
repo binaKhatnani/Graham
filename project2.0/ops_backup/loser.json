@@ -1,0 +1,30 @@
+{
+  "name": "Get top 3 losers",
+  "id": 2,
+  "time": {
+    "cycle": 45
+  },
+  "procedure": [
+    { 
+      "cmd": "GOTO", 
+      "link": "file:///C:/Users/Rohan%20Antony/Desktop/Graham/sample.html"
+    },{
+      "cmd": "EXTRACT",
+      "collection": "loser",
+      "fields": [
+        {
+          "link": "/html/body/table/tbody/tr[2]/td[3]", 
+          "key": "loser1"
+        },{
+          "link": "/html/body/table/tbody/tr[3]/td[3]", 
+          "key": "loser2"
+        },{
+          "link": "/html/body/table/tbody/tr[4]/td[3]", 
+          "key": "loser3"
+        }
+      ]       
+    },{
+      "cmd": "EXIT"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# chromedriver.exe
+config.json
+__pycache__
+__pycache__
+.vscode
+downloads
+temp_data
+downloads copy*

@@ -1,0 +1,33 @@
+{
+  "name": "Asian paints news data",
+  "id": 2,
+  "time": {
+    "interval": 86400
+  },
+  "procedure": [
+    { 
+      "cmd": "GOTO", 
+      "link": "https://news.google.com/search?for=asian%20paints%20share%20price&hl=en-US&gl=US&ceid=US%3Aen"
+    },{
+      "cmd": "EXTRACT",
+      "collection": "google_news",
+      "fields": [
+        {
+          "link": "/html/body/c-wiz/div/div[2]/div[2]/div/main/c-wiz/div[1]/div[1]/div/article/h3", 
+          "key": "headline1"
+        },{
+          "link": "/html/body/c-wiz/div/div[2]/div[2]/div/main/c-wiz/div[1]/div[2]/div/article/h3",   
+          "key": "headline2"
+        },{
+          "link": "/html/body/c-wiz/div/div[2]/div[2]/div/main/c-wiz/div[1]/div[3]/div/article/h3", 
+          "key": "headline3"
+        },{
+          "link": "/html/body/c-wiz/div/div[2]/div[2]/div/main/c-wiz/div[1]/div[4]/div/article/h3",
+          "key": "headline4"
+        }
+      ]       
+    },{
+      "cmd": "EXIT"
+    }
+  ]
+}

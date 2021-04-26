@@ -1,0 +1,25 @@
+{
+  "name": "Get google title",
+  "runtime": "4:30 PM",
+  "cycletime": "86400",
+  "procedure": [
+    { 
+      "cmd": "GOTO", 
+      "link": "https://www.google.com/"
+    },{
+      "cmd": "CLICK",
+      "link": "//*[@id=\"introAgreeButton\"]/span/span"
+    },{
+      "cmd": "EXTRACT",
+      "collection": "google",
+      "fields": [
+        {
+          "link": "/html/body/div[2]/div[3]/span[1]/center/div[3]/div[2]/div/a", 
+          "key": "language"
+        }
+      ]       
+    },{
+      "cmd": "EXIT"
+    }
+  ]
+}

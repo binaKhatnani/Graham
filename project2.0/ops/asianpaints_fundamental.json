@@ -1,0 +1,60 @@
+{
+  "name": "Get daily data of asian paints",
+  "id": 3,
+  "time": {
+    "interval": 86400
+  },
+  "procedure": [
+    { 
+      "cmd": "GOTO", 
+      "link": "https://www.bseindia.com/stock-share-price/asian-paints-ltd/asianpaint/500820/"
+    },{
+      "cmd": "EXTRACT",
+      "collection": "fundamentals",
+      "fields": [
+        {
+          "link": "/html/body/div[1]/div[1]/div[4]/div/div[2]/div/div[2]/div[2]/div[2]",
+          "key": "datetime"
+        },{
+          "link": "/html/body/div[1]/div[6]/div[3]/div/div[1]/div/table/tbody/tr[3]/td[2]", 
+          "key": "open"
+        },{
+          "link": "/html/body/div[1]/div[6]/div[3]/div/div[1]/div/table/tbody/tr[5]/td[2]", 
+          "key": "high"
+        },{
+          "link": "/html/body/div[1]/div[6]/div[3]/div/div[1]/div/table/tbody/tr[7]/td[2]", 
+          "key": "low"
+        },{
+          "link": "/html/body/div[1]/div[6]/div[2]/div/div[1]/div[1]/div[2]/div/span[1]/strong",
+          "key": "close"
+        },{
+          "link": "/html/body/div[1]/div[6]/div[3]/div/div[1]/div/table/tbody/tr[1]/td[2]",
+          "key": "prevclose"
+        },{
+          "link": "/html/body/div[1]/div[6]/div[3]/div/div[3]/div/table/tbody/tr[1]/td[2]",
+          "key": "ttq"
+        },{
+          "link": "/html/body/div[1]/div[6]/div[3]/div/div[3]/div/table/tbody/tr[3]/td[2]",
+          "key": "turnover"
+        },{
+          "link": "/html/body/div[1]/div[6]/div[3]/div/div[4]/div/table/tbody/tr[1]/td[2]",
+          "key": "eps"
+        },{
+          "link": "/html/body/div[1]/div[6]/div[3]/div/div[4]/div/table/tbody/tr[5]/td[2]",
+          "key": "pe"
+        },{
+          "link": "/html/body/div[1]/div[6]/div[3]/div/div[4]/div/table/tbody/tr[7]/td[2]",
+          "key": "pb"
+        }, {
+          "link": "/html/body/div[1]/div[6]/div[3]/div/div[4]/div/table/tbody/tr[9]/td[2]",
+          "key": "roe"
+        }, {
+          "link": "/html/body/div[1]/div[8]/div/div/ng-view/div[4]/div/div[1]/div/div/div/div/div[1]/table/tbody/tr[7]/td[2]",
+          "key": "delToTrade"
+        }
+      ]       
+    },{
+      "cmd": "EXIT"
+    }
+  ]
+}
